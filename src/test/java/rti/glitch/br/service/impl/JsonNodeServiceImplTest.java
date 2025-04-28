@@ -1,5 +1,6 @@
 package rti.glitch.br.service.impl;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -17,7 +18,7 @@ class JsonNodeServiceImplTest {
     @Test
     void getJsonNode() throws IOException {
 
-      Resource resource = new ClassPathResource("campo-espiritual.json");
+      Resource resource = new ClassPathResource("conversation.json");
 
       if (!resource.exists())
           throw new FileNotFoundException();
@@ -30,6 +31,8 @@ class JsonNodeServiceImplTest {
           }
       }
 
+        System.out.println("Oi amor sou!");
         System.out.println(stringBuilder);
+        Assertions.assertNotNull(stringBuilder);
     }
 }

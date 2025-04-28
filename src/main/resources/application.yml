@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: in-search-of-the-five-magics
+  devtools:
+    add-properties: false
+
+logging:
+  level:
+    web: info
+    root: info
